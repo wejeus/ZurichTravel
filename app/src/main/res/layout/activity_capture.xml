@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <fragment
+        android:name="co.daresay.bellatrix.CameraFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/camera_fragment_container" />
+
+	<!--Markers-->
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:padding="18dp">
+
+		<ImageView
+			android:layout_width="35dp"
+			android:layout_height="35dp"
+			android:src="@drawable/scanner_marker_top_left"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentLeft="true"/>
+
+		<ImageView
+			android:layout_width="35dp"
+			android:layout_height="35dp"
+			android:src="@drawable/scanner_marker_top_right"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentRight="true"/>
+
+		<ImageView
+			android:layout_width="35dp"
+			android:layout_height="35dp"
+			android:src="@drawable/scanner_marker_bottom_left"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentLeft="true"/>
+
+		<ImageView
+			android:layout_width="35dp"
+			android:layout_height="35dp"
+			android:src="@drawable/scanner_marker_bottom_right"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentRight="true"/>
+	</RelativeLayout>
+
+</RelativeLayout>

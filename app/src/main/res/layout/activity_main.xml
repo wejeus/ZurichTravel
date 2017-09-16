@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFF3F3F3"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp"
+            android:paddingTop="17dp">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/from_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="From"
+                    android:textColor="#8A000000"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    />
+
+                <EditText
+                    android:id="@+id/input_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/from_label"
+                    android:backgroundTint="#FF1F8EFA"
+                    android:gravity="center"
+                    android:hint="From"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textColor="#FF434B52"
+                    android:textSize="16sp"
+                    tools:text="Technopark"
+                    />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="11dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:src="@drawable/arrows"
+                />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/to_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="To"
+                    android:textColor="#8A000000"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    />
+
+                <EditText
+                    android:id="@+id/input_to"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/to_label"
+                    android:backgroundTint="#FF1F8EFA"
+                    android:gravity="center"
+                    android:hint="To"
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"
+                    android:textColor="#FF434B52"
+                    android:textSize="16sp"
+                    tools:text="Zurich Oerlikon"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/shadow"
+            />
+
+        <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/result"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+
+        <RelativeLayout
+            android:id="@+id/graph_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            tools:visibility="visible"
+            >
+
+            <co.daresay.bellatrix.graph.Graph
+                android:layout_marginTop="35dp"
+                android:id="@+id/graph"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp"
+                android:layout_width="match_parent"
+                android:layout_height="98dp"
+                android:orientation="horizontal"
+                />
+
+            <View
+                android:id="@+id/graph_line"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginRight="23dp"
+                android:layout_below="@id/graph"
+                android:layout_marginTop="4dp"
+                android:background="#dedede"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/graph_line"
+                android:layout_marginTop="4dp"
+                >
+
+                <TextView
+                    style="@style/time_label"
+                    android:text="07:30"/>
+
+                <TextView
+                    style="@style/time_label"
+                    android:text="08:00"/>
+
+                <TextView
+                    style="@style/time_label"
+                    android:text="08:30"/>
+
+                <TextView
+                    style="@style/time_label"
+                    android:text="09:00"/>
+
+                <TextView
+                    style="@style/time_label"
+                    android:text="09:30"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/selected_trip_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/details_left_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="15dp"/>
+
+            <ImageView
+                android:id="@+id/details_right_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"/>
+
+            <ImageView
+                android:id="@+id/details_bottom_image"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_below="@id/details_left_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="13dp"
+                android:scaleType="center"
+                />
+
+            <TextView
+                android:id="@+id/button_checkin"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/details_bottom_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/zurich_orange"
+                android:gravity="center"
+                android:text="Check in to earn points"
+                android:textColor="#FFFFFFFF"
+                android:textSize="20sp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

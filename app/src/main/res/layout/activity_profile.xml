@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	>
+
+	<LinearLayout
+		android:layout_centerHorizontal="true"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:gravity="center_horizontal"
+		android:paddingTop="70dp">
+
+		<ImageView
+			android:src="@drawable/money"
+			android:layout_width="110dp"
+			android:layout_height="110dp" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Great job!"
+			android:textColor="@color/standard_yellow"
+			android:textSize="60sp" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="You earned +17 points"
+			android:textSize="30sp" />
+
+		<!--<TextView-->
+			<!--android:layout_width="wrap_content"-->
+			<!--android:layout_height="wrap_content"-->
+			<!--android:textSize="18dp"-->
+			<!--android:text="You earned new points"/>-->
+
+		<TextView
+			android:id="@+id/total_points"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="0p"
+			android:background="@drawable/rounded_corner"
+			android:layout_margin="25dp"
+			android:paddingTop="10dp"
+			android:paddingBottom="10dp"
+			android:paddingLeft="20dp"
+			android:paddingRight="20dp"
+			android:textSize="45dp" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:text="Only 14 points left until you\nreach discount"
+			android:textColor="@color/standard_text_blue"
+			android:textSize="20sp" />
+
+	</LinearLayout>
+
+	<Button
+		android:id="@+id/button_home"
+		android:layout_centerHorizontal="true"
+		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="50dp"
+		android:layout_width="300dp"
+		android:layout_height="wrap_content"
+		android:background="@color/standard_yellow"
+		android:textColor="#ffffff"
+		android:text="Take me home"/>
+</RelativeLayout>

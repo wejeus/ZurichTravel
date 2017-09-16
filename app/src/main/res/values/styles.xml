@@ -1,0 +1,18 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Material.Light">
+        <item name="android:colorPrimary">#ffffff</item>
+        <item name="android:textColorPrimary">#FF303030</item>
+        <item name="android:colorPrimaryDark">#FF303030</item>
+    </style>
+
+    <style name="time_label">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">#FF86929D</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+</resources>
